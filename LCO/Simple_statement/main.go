@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"strconv"
 )
@@ -18,7 +19,7 @@ func main() {
 	if i, err = strconv.Atoi("95"); err == nil {
 		fmt.Println("The value if i is ", i)
 	} else {
-		panic(err)
+		log.Fatal(err)
 	}
 
 	if args := os.Args; len(args) != 2 {
